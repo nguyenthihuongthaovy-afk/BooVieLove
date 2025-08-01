@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hồng Sơn yêu Thảo Vi</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background-color: #ffe6f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    h1 {
+      color: #cc3366;
+      margin-bottom: 15px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #yesBtn { background: #ff66b2; color: white; }
+    #noBtn { background: #aaa; color: white; }
+    img {
+      width: 150px;
+      margin: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hồng Sơn có yêu Thảo Vi không 🤔?</h1>
+  <img id="img1" src="https://insacmau.com/wp-content/uploads/2024/07/sticker-tho-cute-44-800x800.jpg"/>
+  <button id="yesBtn">Yes</button>
+  <button id="noBtn">No</button>
+  <div id="msg"></div>
+
+  <script>
+    const yes = document.getElementById("yesBtn");
+    const no = document.getElementById("noBtn");
+    const msg = document.getElementById("msg");
+    const img = document.getElementById("img1");
+
+    yes.addEventListener("mouseover", () => {
+      const x = Math.random() * 300 - 150;
+      const y = Math.random() * 300 - 150;
+      yes.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    no.addEventListener("click", () => {
+      document.body.innerHTML = `
+        <h2 style="color:red;">Tui biết ngay mà, anh hết yêu Thảo Vi rồi. Dỗiii 🥹</h2>
+        <img src="https://i.pinimg.com/474x/57/f3/50/57f35042a3e581a019649209cf5a6a39.jpg" />
+      `;
+    });
+  </script>
+</body>
+</html>
+
