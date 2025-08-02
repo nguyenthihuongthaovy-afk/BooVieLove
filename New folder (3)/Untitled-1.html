@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BooVieLove</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background-color: #aacfe8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+   
+    button {
+      padding: 20px 40px;
+      margin: 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #yesBtn { background: #f687bb; color: white; }
+    #noBtn { background: #518fae; color: white; }
+    img {
+      width: 150px;
+      margin: 20px;
+    }
+     #inputSection {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    input {
+      padding: 10px;
+      width: 300px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #aaa;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Anh có yêu em hong?</h1>
+  <img id="img1" src="https://appstickers-cdn.appadvice.com/1443576976/829349532/62f11a98c74e1e214e78b65d9ff49741-0.gif"/>
+  <button id="yesBtn">Yes</button>
+  <button id="noBtn">No</button>
+  <div id="msg"></div>
+
+ <div id="inputSection">
+    <p>Trả lời ko đúng chớt với tui 😎</p>
+    <input type="text" id="answerInput" placeholder="Yêu thương gì ko viết ra nào ..." />
+    <button id="submitBtn">Gửi</button>
+  </div>
+
+
+  <script>
+    const yes = document.getElementById("yesBtn");
+    const no = document.getElementById("noBtn");
+    const inputSection = document.getElementById("inputSection");
+    const submitBtn = document.getElementById("submitBtn");
+    const answerInput = document.getElementById("answerInput");
+
+
+  
+
+    yesBtn.addEventListener("click", () => {
+      inputSection.style.display = "flex";
+    });
+
+
+
+    no.addEventListener("click", () => {
+      document.body.innerHTML = `
+        <h2 style="color:red;">Anh bấm nhầm thôi đúng hong, tình yêu của chúng mình vẫn vẹn nguyên như ban đầu❤️</h2>
+        <img src="https://i.pinimg.com/originals/29/30/2e/29302e87b095680878f6b6519237d88b.gif" />
+      `;
+    });
+      submitBtn.addEventListener("click", () => {
+      const answer = answerInput.value.trim().toLowerCase();
+      if (answer === "anh yêu em nhất trên đời") {
+        document.body.innerHTML = `
+          <h1 style="color:red;">Em cũng yêu anh nhất trên đời❤️</h1>
+          <img src="https://gifdb.com/images/high/love-cute-white-puffy-bear-sticker-6370meeebdiv0b8s.gif" />
+        `;
+      } else {
+        alert("Sai rồi 😝, thử lại đi cưng ơi!");
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
